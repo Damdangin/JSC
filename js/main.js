@@ -27,3 +27,4 @@ console.log(money)
 
 console.log("제이름은"+name+"입니다.")
 console.log(`제이름은 ${name} 입니다.`)
+console.log("ddd")
