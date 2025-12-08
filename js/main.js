@@ -15,7 +15,8 @@ console.log(nai)
 
 //data-type
 //String, Number, Boolean, null, undefined-어떤값도 선언하지않은 상태
-const name = "hoon";
+const name = "jaehoon";
+const nicname = "parkjaehoon"
 const age = 25;
 const weight = 76.3;
 const isMale = true;
@@ -23,8 +24,76 @@ const money = null;
 const girlfriend = undefined;
 let boyfriend;
 
-console.log(money)
+// console.log(money)
 
-console.log("제이름은"+name+"입니다.")
-console.log(`제이름은 ${name} 입니다.`)
-console.log("ddd")
+// console.log("제이름은"+name+"입니다.") 옛날 방식
+// console.log(`제이름은 ${name} 입니다.`) 이렇게 쓰는 편이 좋다
+
+console.log(nicname.substring(0,4).toUpperCase()) //0번 인덱스에서 4번까지
+console.log(name.split("")) //split으로 "" 한칸마디마다 자를수 있음
+
+const hobbies = "baseball, basketball, game, computer";
+
+console.log(hobbies.split(",")[0])
+//split을 , 기준으로 나눔 뒤에 []배열을 넣으면 해달 칸의 값을 가져옴
+
+
+//!Array
+const animals = ["lion", "bear", "monkey"]
+
+animals[3] = "deer" //지정 해서 넣을 수 있음
+
+animals.push("fish") //push함수로 맨 마지막으로 넣을수 있음
+
+animals.unshift("hippo") //unshift함수로 맨 앞으로 넣을 수 있음
+
+console.log(animals)
+
+animals.pop() //pop함수로 뺄수있음
+console.log(animals)
+
+console.log(Array.isArray(animals))
+
+console.log(animals.indexOf('hippo')) //몇번째에 있는지 확인가능
+
+
+console.log(animals)
+const bearIndex = animals.indexOf('lion')
+animals.splice(bearIndex,2) //splice는 (?,?) 첫번째 ?부터 2번째 ?전까지
+console.log(animals)
+
+
+//Object
+const monkey = {
+    name: "ringo",
+    face: "funny",
+    age: 11,
+    food: ["banana","apple","strawberry"],
+    tail: true,
+    location: {
+        country: "Congo",
+        place: "forest",
+        isAfrica: true,
+    }
+}
+
+console.log(monkey)
+console.log(monkey.location.place) //오브젝트안에 오브젝트는 . 을 찍으면됨
+
+monkey.name = "star";
+console.log(monkey.name)
+
+monkey.food[1] = "peanut";
+console.log(monkey.food)
+
+monkey.weight = 50;
+console.log(monkey.weight)
+
+
+//JSON 변화
+const monkeyJSON = JSON.stringify(monkey);
+console.log(monkeyJSON);
+
+//JSON데이터 JS화
+const monkeyJSONParse = JSON.parse(monkeyJSON);
+console.log(monkeyJSONParse);
