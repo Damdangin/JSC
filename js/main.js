@@ -39,28 +39,28 @@ console.log(hobbies.split(",")[0])
 
 
 //!Array
-const animals = ["lion", "bear", "monkey"]
+//const animals = ["lion", "bear", "monkey"]
 
-animals[3] = "deer" //지정 해서 넣을 수 있음
+// animals[3] = "deer" //지정 해서 넣을 수 있음
 
-animals.push("fish") //push함수로 맨 마지막으로 넣을수 있음
+// animals.push("fish") //push함수로 맨 마지막으로 넣을수 있음
 
-animals.unshift("hippo") //unshift함수로 맨 앞으로 넣을 수 있음
+// animals.unshift("hippo") //unshift함수로 맨 앞으로 넣을 수 있음
 
-console.log(animals)
+// console.log(animals)
 
-animals.pop() //pop함수로 뺄수있음
-console.log(animals)
+// animals.pop() //pop함수로 뺄수있음
+// console.log(animals)
 
-console.log(Array.isArray(animals))
+// console.log(Array.isArray(animals))
 
-console.log(animals.indexOf('hippo')) //몇번째에 있는지 확인가능
+// console.log(animals.indexOf('hippo')) //몇번째에 있는지 확인가능
 
 
-console.log(animals)
-const bearIndex = animals.indexOf('lion')
-animals.splice(bearIndex,2) //splice는 (?,?) 첫번째 ?부터 2번째 ?전까지
-console.log(animals)
+// console.log(animals)
+// const bearIndex = animals.indexOf('lion')
+// animals.splice(bearIndex,2) //splice는 (?,?) 첫번째 ?부터 2번째 ?전까지
+// console.log(animals)
 
 
 //Object
@@ -97,3 +97,54 @@ console.log(monkeyJSON);
 //JSON데이터 JS화
 const monkeyJSONParse = JSON.parse(monkeyJSON);
 console.log(monkeyJSONParse);
+
+
+//반복문
+const animals = [
+    {name: 'lion', size: 'big', isAggressive: true, weight: 200},
+    {name: 'monkey', size: 'medium', isAggressive: true, weight: 30},
+    {name: 'cat', size: 'small', isAggressive: false, weight: 12},
+    {name: 'rat', size: 'small', isAggressive: false, weight: 2}
+];
+
+// for (let i = 0; i < animals.length; i++) {
+//     console.log(animals[i].name);
+// }
+
+// for(let animal of animals) {
+//     console.log(animal)
+// }
+
+// let i = 0;
+// while (i < 10) {
+//     console.log(i)
+//     i++;
+// } 
+// 여기까지는 정석적인 반복문
+
+
+//forEach, map, filter, reduce 반복문
+
+// animals.forEach(function(animal, index){
+//     console.log(animal)
+//     console.log(index)
+// })
+
+// const animalsNames = animals.map(function(animal){
+//     return `Animal's name is ${animal.name} and size is ${animal.size}`
+// });
+// console.log(animalsNames)
+
+// const smallAnimal = animals.filter(function(item){
+//     return item.size === 'small';
+// }) 
+// console.log(smallAnimal)
+
+// const numbers = [1, 10, 11, 23, 444];
+
+// const total = numbers.reduce(function(acc, cur){
+//     console.log(acc,cur);
+//     return acc+cur;
+// })
+
+// console.log(total)
