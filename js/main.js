@@ -147,4 +147,57 @@ const animals = [
 //     return acc+cur;
 // })
 
-// console.log(total)
+const totalWeight = animals.reduce(function(acc,cur) {
+    return acc + cur.weight;
+}, 0) //초기값을 0으로 해야 문제없이 됨
+
+console.log(totalWeight)
+
+
+//조건문
+const x = 10;
+if(x == "10") { //자료형이 달라도 값만 같으면 표시됨
+    console.log(`x is 10`)
+}
+if(x === "10") { //자료형까지 같아야 표시됨
+    console.log(`x is 10`)
+} else if (x === 20) {
+    console.log(`x is 20`)
+}
+else {
+    console.log(`x is not 10`)
+}
+
+
+//삼항조건문
+const animal = 'lion'
+const food = animal === 'lion' ? "meat" : "apple"; //food는 animal이 lion이면 meat를 값을 아니면 apple을 값을 준다
+
+console.log(food)
+
+//switch case
+switch(animal) {
+    case 'lion':
+        console.log('animal is lion');
+        break;
+    case 'monkey':
+        console.log('animal is monkey');
+        break;
+    default:
+        console.log('animal is unknown');
+        break;
+}
+
+//function문
+function add(a = 1, b = 2) { //ES6에서는 파라미터를 넣지않고 미리 넣을 수 있게 됨 a = 1, b = 2이런식
+    return a+b;
+}
+//const sum = add(); //()안에 값을 넣을수잇음 (1, 2)
+
+//애로우function =>
+const add1 = (a, b) => {
+    return a + b;
+}
+//애로우펑션의 장점
+const add2 = (a = 1, b = 2) => a + b;
+console.log(add2())
